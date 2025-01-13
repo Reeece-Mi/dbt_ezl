@@ -1,5 +1,6 @@
 {{ config(
     materialized='view',
+    schema = 'test_view',
     database='ezlicence-1506735963116'
 ) }}
 
@@ -7,7 +8,7 @@ with fail_record as (
     select *
     from {{ source('production', 'public_public_search_records') }}
     where result_count = 0 
-    and date(created_at) > '2024-09-15'
+    and date(created_at) > '2024-08-15'
     order by created_at desc
 )
 
