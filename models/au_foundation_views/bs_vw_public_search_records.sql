@@ -4,8 +4,8 @@
     schema = 'au_foundation_view'
 ) }}
     SELECT
-        -- Primary Key au_foundation_view
-        id AS search_id,
+        -- Primary Key 
+        id AS search_record_id,
         
         -- Temporal Fields (standardized)
         DATE(COALESCE(date_range_start, date_range_end)) AS search_date_start,
@@ -32,13 +32,6 @@
         suburb,
         suburb_polygon_id,
         COALESCE(timezone, 'UTC') AS timezone,
-        
-        -- Standardize boolean
-        CASE 
-            WHEN LOWER(TRIM(is_pdi)) IN ('true', 'yes', '1') THEN TRUE
-            WHEN LOWER(TRIM(is_pdi)) IN ('false', 'no', '0') THEN FALSE
-            ELSE NULL
-        END AS is_pdi,
         
         -- Metadata Fields
         LOWER(TRIM(event_tracking_type)) AS event_tracking_type,
