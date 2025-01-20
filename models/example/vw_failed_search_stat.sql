@@ -1,6 +1,5 @@
 {{ config(
-    materialized='view',
-    schema = 'test_view',
+    materialized='table',
     database='ezlicence-1506735963116'
 ) }}
 
