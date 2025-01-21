@@ -11,7 +11,7 @@ SELECT
     paypal_pay_id,                 -- UNIQUE INDEX
     transaction_id,
     stripe_payment_intent_id,
-    stripe_uid,
+    -- stripe_uid,
     stripe_token,
     payer_id,
     
@@ -39,13 +39,13 @@ SELECT
         ELSE 'unknown'
     END AS gate_way,
     payment_source AS payment_source,     
-    source AS source,
+    -- source AS source,
     payment_email,
     
     -- Monetary Values (using NUMERIC for precision)
     amount,
     CAST(credit_amount AS INT64) AS credit_amount,
-    CAST(test_package_credit_amount AS INT64) AS test_package_credit_amount,
+    -- CAST(test_package_credit_amount AS INT64) AS test_package_credit_amount,
     ezl_revenue,
     lesson_total_price,            
     test_package_total_price,      
@@ -73,11 +73,11 @@ SELECT
     
     -- Purchase Details
     CAST(purchases AS INT64) AS purchases,
-    CASE 
-        WHEN campaign_type = 0 THEN 'free_lesson'
-        WHEN campaign_type = 1 THEN 'price_25_percent_off'
-        ELSE 'unknown'
-    END AS campaign_type,
+    -- CASE 
+    --     WHEN campaign_type = 0 THEN 'free_lesson'
+    --     WHEN campaign_type = 1 THEN 'price_25_percent_off'
+    --     ELSE 'unknown'
+    -- END AS campaign_type,
     purchase_journey_id,
     CASE 
         WHEN transmission = 0 THEN 'auto'

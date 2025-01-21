@@ -12,7 +12,7 @@ SELECT
    prestored_learner_user_id,
 --    lesson_bulk_id,
    proposed_group_id,
-   driving_test_location_id,
+--    driving_test_location_id,
    
    -- Temporal Fields (Lesson Schedule)
    lesson_date,
@@ -47,14 +47,14 @@ SELECT
    COALESCE(use_default_pickup_address, TRUE) AS is_default_pickup,
    
    -- Dropoff Location
-   dropoff_address_street_number,
-   dropoff_address_street_name,
-   dropoff_address_street_type,
-   dropoff_address_region,
+  --  dropoff_address_street_number,
+  --  dropoff_address_street_name,
+  --  dropoff_address_street_type,
+  --  dropoff_address_region,
    COALESCE(use_default_dropoff_address, TRUE) AS is_default_dropoff,
    
    -- Additional Information
-   instructor_note,
+  --  instructor_note,
    
    -- Temporal Fields (System)
    created_at,

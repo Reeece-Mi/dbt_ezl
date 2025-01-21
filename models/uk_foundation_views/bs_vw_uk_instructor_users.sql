@@ -33,13 +33,13 @@ SELECT
    in_priority_regions,
    
    -- Vehicle Details
-   vehicle_make,
-   vehicle_model,
-   vehicle_year,
-   vehicle_registration_number,
-   vehicle_transmission,
-   ANCAP_rating,
-   dual_controls,
+  --  vehicle_make,
+  --  vehicle_model,
+  --  vehicle_year,
+  --  vehicle_registration_number,
+  --  vehicle_transmission,
+  --  ANCAP_rating,
+  --  dual_controls,
    
    -- Professional Details
    years_for_instructing,
@@ -54,7 +54,7 @@ SELECT
    lesson_travel_time,
    conflict_transmission_travel_time,
    instructor_product_service_ids,
-   referal_code AS referral_code,
+  --  referal_code AS referral_code,
    language_spoken,
    
    -- Commission and Payouts
@@ -116,14 +116,14 @@ SELECT
    last_sign_in_at,
    current_sign_in_ip,
    last_sign_in_ip,
-   access_token,
+  --  access_token,
    COALESCE(two_fa_enabled, TRUE) AS is_2fa_enabled,
    second_factor_attempts_count,
    
    -- Important Dates
    go_live_date,
    first_booking_received,
-   max_booking_date,
+  --  max_booking_date,
    availability_updated_at,
    
    -- System Fields

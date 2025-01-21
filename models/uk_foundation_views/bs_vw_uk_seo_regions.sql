@@ -15,8 +15,8 @@ SELECT
    state,
    
    -- Pricing
-   auto_price_per_hour,
-   manual_price_per_hour,
+  --  auto_price_per_hour,
+  --  manual_price_per_hour,
    
    -- Geographic Data
 --    coverage_polygon,

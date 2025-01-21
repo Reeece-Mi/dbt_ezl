@@ -35,9 +35,9 @@ SELECT
    preferred_pickup_address_lng,
    
    -- Relationships
-   instructor_user_id,
+  --  instructor_user_id,
    current_instructor_id,
-   refer_instructor_id,
+  --  refer_instructor_id,
    inviter_instructor_user_id,
    learner_referral_id,
    
@@ -87,7 +87,7 @@ SELECT
    
    -- Marketing & Attribution
    source AS acquisition_source,
-   sign_up_coupon_id,
+  --  sign_up_coupon_id,
    mailchimp_id,
    utm_campaign,
    utm_content,

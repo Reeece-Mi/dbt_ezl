@@ -15,7 +15,7 @@ SELECT
    -- Location Hierarchy
    country_id,                        
    state_id,
-   administrative_area_id,           
+  --  administrative_area_id,           
    administrative_area,
    suburb,
    state,
@@ -35,8 +35,8 @@ SELECT
 --    final_manual_price_per_hour,
    
    -- Region Configuration
-   except_regions,
-   plus_regions,
+  --  except_regions,
+  --  plus_regions,
    suburb_parameterize,
    
    -- Temporal Fields

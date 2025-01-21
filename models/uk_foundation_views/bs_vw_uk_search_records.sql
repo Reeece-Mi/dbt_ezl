@@ -16,7 +16,7 @@
         -- Core Business Fields (standardized)
         learner_user_id,
         instructor_user_ids,  
-        driving_test_location_id,
+        -- driving_test_location_id,
         transmission,
         CASE 
             WHEN public_search_type = 0 THEN 'lesson'

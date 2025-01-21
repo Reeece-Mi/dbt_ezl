@@ -27,8 +27,8 @@ SELECT
 --    final_manual_price_per_hour,
    
    -- Region Configuration
-   except_regions,
-   plus_regions,
+  --  except_regions,
+  --  plus_regions,
    
    -- Temporal Fields
    created_at,

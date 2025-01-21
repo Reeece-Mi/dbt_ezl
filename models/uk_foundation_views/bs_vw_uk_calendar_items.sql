@@ -36,10 +36,10 @@ SELECT
     -- Temporal Fields (maintaining index awareness)
     start_time,            
     end_time,               
-    pickup_time,
+    -- pickup_time,
     created_at,             
     updated_at,             
-    proposed_at,
+    -- proposed_at,
     source,
     
     -- Event Details
@@ -54,30 +54,30 @@ SELECT
     
     -- Location Information (with index awareness)
     address,
-    postcode,               
+    -- postcode,               
     state,                 
-    region,
-    preferred_pickup_region,
+    -- region,
+    -- preferred_pickup_region,
     
     -- Pickup Address Components
     pickup_address,
     pickup_address_suburb,
     pickup_address_postcode,
     pickup_address_state,
-    pickup_address_street_number,
-    pickup_address_street_name,
-    pickup_address_street_type,
+    -- pickup_address_street_number,
+    -- pickup_address_street_name,
+    -- pickup_address_street_type,
     pickup_suburb_polygon_id,
     
     -- Dropoff Address Components
-    dropoff_address,
-    dropoff_address_suburb,
-    dropoff_address_postcode,
-    dropoff_address_state,
-    dropoff_address_street_number,
-    dropoff_address_street_name,
-    dropoff_address_street_type,
-    dropoff_suburb_polygon_id,
+    -- dropoff_address,
+    -- dropoff_address_suburb,
+    -- dropoff_address_postcode,
+    -- dropoff_address_state,
+    -- dropoff_address_street_number,
+    -- dropoff_address_street_name,
+    -- dropoff_address_street_type,
+    -- dropoff_suburb_polygon_id,
     
     -- Travel Times (preserving defaults)
     event_travel_time_before,        
@@ -88,7 +88,7 @@ SELECT
     -- Boolean Flags (preserving defaults)
     COALESCE(calendar_flag, TRUE) AS is_calendar_visible,         -- DEFAULT true
     COALESCE(k2d_lesson, FALSE) AS is_k2d_lesson,                -- DEFAULT false
-    COALESCE(passed, FALSE) AS is_passed,
+    -- COALESCE(passed, FALSE) AS is_passed,
     COALESCE(private_lesson, FALSE) AS is_private_lesson,
     COALESCE(dynamic_pricing, FALSE) AS has_dynamic_pricing,
     
@@ -102,8 +102,7 @@ SELECT
     NULLIF(event_detail, '') AS event_detail,
     NULLIF(address_note, '') AS address_note,
     
-    -- System Identifiers
-    driving_test_location_id,
+    -- driving_test_location_id,
     instructor_proposed_lesson_id,
 
     -- Audit Fields
