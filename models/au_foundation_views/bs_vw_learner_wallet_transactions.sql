@@ -1,3 +1,9 @@
+{{ config(
+    materialized='view',
+    database='ezlicence-1506735963116',
+    schema = 'au_foundation_view'
+) }}
+
 SELECT
    -- Primary Identifiers (with indices)
    id AS learner_wallet_transactions_id,                   
