@@ -5,7 +5,7 @@
 ) }}
 SELECT
     -- Primary Identifiers (with index awareness)
-    id AS snapshot_id,          -- PRIMARY KEY, UNIQUE INDEX
+    id AS instructor_status_snapshot_id,          -- PRIMARY KEY, UNIQUE INDEX
     instructor_user_id,         -- INDEX
     
     -- Temporal Fields
@@ -15,7 +15,6 @@ SELECT
     updated_at,           
     
     -- Status Fields
-    CAST(status AS INT64) AS instructor_status_id,
     CASE 
         WHEN status = 0 THEN 'registered'
         WHEN status = 1 THEN 'profile_completed'
@@ -28,7 +27,7 @@ SELECT
         WHEN status = 8 THEN 'deleted'
         WHEN status = 9 THEN 'pre_registered'
         ELSE 'unknown'
-    END AS instructor_status_name,
+    END AS status,
     
     -- Boolean Settings
     COALESCE(public_search_disabled, FALSE) AS is_public_search_disabled,

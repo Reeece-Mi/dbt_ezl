@@ -23,7 +23,7 @@ SELECT
 
    -- Credits Breakdown - Cash
    cash_credits_added_by_lesson,
-   case when cash_credits_added_by_test_pack > 0 then 2.5 end as test_package_hours_of_credits_purchasededits_added_by_test_pack,
+   case when cash_credits_added_by_test_pack > 0 then 2.5 end as cash_credits_added_by_test_pack,
    cash_credits_added_by_lesson_shortfall,
    cash_credits_added_by_test_pack_shortfall,
    account_credits_added_by_dkt,

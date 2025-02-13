@@ -16,7 +16,7 @@ SELECT
    
    -- Temporal Fields (Lesson Schedule)
    lesson_date,
-   lesson_time,
+   lesson_time, 
    start_time,
    end_time,
    

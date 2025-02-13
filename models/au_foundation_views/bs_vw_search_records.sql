@@ -31,6 +31,7 @@
         postcode,
         suburb,
         suburb_polygon_id,
+        state,
         COALESCE(timezone, 'UTC') AS timezone,
         
         -- Metadata Fields
